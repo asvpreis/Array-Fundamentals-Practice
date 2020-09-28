@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+
+int countUppercase(char array[], int arrayLength){
+    int upperCase = 0;
+    for (int i = 0; i < arrayLength; i++) {
+        if (array[i]>='A' && array[i]<='Z'){
+            upperCase++;
+        }
+    }
+    return upperCase;
+}
+
+int main(){
+    const int arrayLength = 10;
+    char array[arrayLength] = {'A', 'b', 'c', 'D', 'e', 'f', 'G', 'h', 'i', '\0'};
+    cout << "Upper case characters: " << countUppercase(array, 10) << endl;
+    return 0;
+}
